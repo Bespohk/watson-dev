@@ -9,7 +9,7 @@ Docs <http://watson-dev.readthedocs.org/>`__.
 Build Status
 ^^^^^^^^^^^^
 
-|Build Status| |Coverage Status| |Pypi|
+|Build Status| |Coverage Status| |Version| |Downloads| |Licence|
 
 Installation
 ------------
@@ -21,9 +21,13 @@ Dependencies
 
 -  watson-common
 
-.. |Build Status| image:: https://api.travis-ci.org/bespohk/watson-dev.png?branch=master
-   :target: https://travis-ci.org/bespohk/watson-dev
+.. |Build Status| image:: https://api.travis-ci.org/Bespohk/watson-dev.png?branch=master
+   :target: https://travis-ci.org/Bespohk/watson-dev
 .. |Coverage Status| image:: https://coveralls.io/repos/bespohk/watson-dev/badge.png
    :target: https://coveralls.io/r/bespohk/watson-dev
-.. |Pypi| image:: https://pypip.in/v/watson-dev/badge.png
-   :target: https://crate.io/packages/watson-dev/
+.. |Version| image:: https://pypip.in/v/watson-dev/badge.png
+   :target: https://pypi.python.org/pypi/watson-dev/
+.. |Downloads| image:: https://pypip.in/d/watson-dev/badge.png
+   :target: https://pypi.python.org/pypi/watson-dev/
+.. |Licence| image:: https://pypip.in/license/watson-dev/badge.png
+   :target: https://pypi.python.org/pypi/watson-dev/

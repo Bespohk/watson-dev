@@ -64,7 +64,7 @@ with open(os.path.join(path, 'requirements.txt')) as f:
 setup(
     name='watson-dev',
     version=watson.dev.__version__,
-    url='http://github.com/bespohk/watson-dev',
+    url='http://github.com/watsonpy/watson-dev',
     description='Work with WSGI applications locally.',
     long_description=readme,
 

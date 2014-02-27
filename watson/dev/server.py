@@ -4,7 +4,7 @@ from watson.dev.middleware import StaticFileMiddleware
 from watson.dev.reloader import main
 
 
-def make_dev_server(app, host='127.0.0.1', port=8000,
+def make_dev_server(app, host='0.0.0.0', port=8000,
                     do_reload=True, script_dir=None, public_dir=None):
     """
     A simple local development server utilizing the existing simple_server
@@ -25,7 +25,7 @@ def make_dev_server(app, host='127.0.0.1', port=8000,
 
     Args:
         app: A WSGI callable
-        host: The host
+        host: The host to bind to
         port: The port
         do_reload: Whether or not to automatically reload the application when
                    source code changes.

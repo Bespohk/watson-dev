@@ -1,5 +1,5 @@
 [run]
-# omit
+omit = watson/dev/reloader.py, watson/dev/server.py
 
 [html]
 directory = tests/_coverage

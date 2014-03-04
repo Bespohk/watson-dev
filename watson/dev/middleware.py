@@ -34,7 +34,8 @@ class StaticFileMiddleware(object):
         path = os.path.join(self.initial_dir, environ['PATH_INFO'][1:])
         run_app = True
         actual_path = os.path.join(path)
-        if os.path.exists(actual_path) and not stat.S_ISDIR(os.stat(actual_path).st_mode):
+        exists = os.path.exists(actual_path)
+        if exists or (exists and stat.S_ISDIR(os.stat(actual_path).st_mode)):
             run_app = False
         if run_app:
             return self.app(environ, start_response)
@@ -46,6 +47,7 @@ class StaticFileMiddleware(object):
                                      start_response)
 
     def serve_static(self, path, file_stat, environ, start_response):
+        print('serving directory')
         if stat.S_ISDIR(file_stat.st_mode):
             raise Exception('Cannot serve a directory')
         if stat.S_ISREG(file_stat.st_mode):

@@ -5,7 +5,7 @@ from watson.dev.reloader import main
 
 
 def make_dev_server(app, host='0.0.0.0', port=8000,
-                    do_reload=True, script_dir=None, public_dir=None):
+                    noreload=False, script_dir=None, public_dir=None):
     """
     A simple local development server utilizing the existing simple_server
     module, but allows for serving of static files.
@@ -27,11 +27,11 @@ def make_dev_server(app, host='0.0.0.0', port=8000,
         app: A WSGI callable
         host: The host to bind to
         port: The port
-        do_reload: Whether or not to automatically reload the application when
-                   source code changes.
+        noreload: Whether or not to automatically reload the application when
+                  source code changes.
     """
     wrapped_app = StaticFileMiddleware(app, initial_dir=public_dir)
-    if do_reload:
+    if not noreload:
         main(__run_server, (wrapped_app, host, port), script_dir=script_dir)
     else:
         try:
